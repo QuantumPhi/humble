@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/QuantumPhi/humble/issues"
   },
-  "homepage": "https://github.com/QuantumPhi/humble"
+  "homepage": "https://github.com/QuantumPhi/humble",
+  "dependencies": {
+    "express": "^4.11.0"
+  }
 }
