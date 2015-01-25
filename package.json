@@ -18,5 +18,10 @@
   "homepage": "https://github.com/QuantumPhi/humble",
   "dependencies": {
     "express": "^4.11.0"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-jade": "^0.11.0"
   }
 }

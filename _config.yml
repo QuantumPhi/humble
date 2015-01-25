@@ -1,0 +1,7 @@
+exclude: [
+    .gitignore,
+    Gulpfile.js,
+    index.html,
+    package.json,
+    README.md
+]
