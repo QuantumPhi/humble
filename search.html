@@ -31,48 +31,20 @@
                         <h3 class="masthead-brand">humble</h3>
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="search.html">Search</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="#">Search</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
 
-                <div class="inner cover">
-                    <h1 class="cover-heading">What is your package.json?</h1>
-                </div>
-
                 <div class="inner">
                     <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">name:</label>
+                        <div class="form-group-lg">
+                            <label for="search" class="col-sm-2 control-label">Search:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" placeholder="name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="version" class="col-sm-2 control-label">version:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="version" placeholder="version">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label">description:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="description" placeholder="description">
-                            </div>
-                        </div>
-                        <div class="form-group" id="fdeps">
-                            <label for="deps" class="col-sm-2 control-label">dependencies:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="deps" placeholder="dependency">
-                            </div>
-                        </div>
-                        <div class="form-group" id="fdevdeps">
-                            <label for="devdeps" class="col-sm-2 control-label">development:</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="devdeps" placeholder="devdependency">
+                                <input type="text" class="form-control input-lg" id="search" placeholder="search">
                             </div>
                         </div>
                     </form>
@@ -80,8 +52,13 @@
 
                 <div class="inner cover">
                     <p class="lead">
+                        <br/>
                         <a href="#" class="btn btn-lg btn-default" onclick="flush()">Submit</a>
                     </p>
+                </div>
+
+                <div class="inner" id="results">
+
                 </div>
 
                 <div class="mastfoot">
@@ -106,20 +83,6 @@
     <script>
         Parse.initialize("KP3ysb2isie8CmHm49iVkcGXdxN0Y3VNHjV1B8oD", "KrjFOxVKzXPv54CYmkGGj91niIfm6rH1zKo8kaB8");
         var UsrPackage = Parse.Object.extend("package")
-        function flush() {
-            var object = new UsrPackage()
-            object.save({
-                name: $("#name").val(),
-                version: $("#version").val(),
-                description: $("#description").val(),
-                dependencies: $("#deps").val(),
-                devdependencies: $("#devdeps").val()
-            }).then(function(object) {
-                $("input").each(function(key, value) {
-                    $(value).val("")
-                })
-            })
-        }
     </script>
 </body>
 </html>
